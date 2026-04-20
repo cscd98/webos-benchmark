@@ -2,18 +2,6 @@
 
 This repository hosts some benchmarks that can be run on webOS.
 
-**SciMark:**
-
-https://math.nist.gov/scimark2/credits.html
-
-**CoreMark:**
-
-https://github.com/eembc/coremark/blob/main/LICENSE.md
-
-**RAMspeed/SMP:**
-
-https://github.com/cruvolo/ramspeed-smp/blob/master/LICENCE
-
 **Instructions:**
 
 **In the armv7a folder:**
@@ -22,7 +10,8 @@ The following are compiled for armv7a (soft fp). They should be run from ssh.
 
 scimark/coremark/ramsmp
 
-There are also some variants provided to see what affect compiling for specific optimizations like O2, O3, specific tuning for a53, a78 etc. also.
+There are also some variants provided to see what affect it has compiling for specific optimizations like O2, O3.
+There are also specific builds tuned for a53, a78 etc. also.
 
 **In the aarch64 folder:**
 
@@ -31,6 +20,7 @@ scimark/coremark/ramsmp
 Note to run these you will need ld-linux-aarch64.so.1 placed at: /media/developer/temp/lib64/ld-linux-aarch64.so.1 as this is not provided by LG.
 
 webOS is a 32-bit operating system but the kernel is 64-bit, so it can still run 64-bit compiled code.
+
 
 **Example benchmark of a LG G4 OLED (2024 model):**
 
@@ -64,3 +54,18 @@ SciMark2 (Floating‑Point Workloads, `-O3` Optimized)
 | Monte Carlo   | 225.99 Mflops  | 206.58 Mflops     | ~‑9% (slower)       |
 | Sparse MM     | 742.25 Mflops  | 1159.88 Mflops    | ~+56%               |
 | LU            | 1408.97 Mflops | 2691.22 Mflops    | ~+91%               |
+
+
+**Benchmarks provided:**
+
+**SciMark:**
+
+https://math.nist.gov/scimark2/credits.html
+
+**CoreMark:**
+
+https://github.com/eembc/coremark/blob/main/LICENSE.md
+
+**RAMspeed/SMP:**
+
+https://github.com/cruvolo/ramspeed-smp/blob/master/LICENCE
